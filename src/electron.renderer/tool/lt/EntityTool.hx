@@ -67,13 +67,13 @@ class EntityTool extends tool.LayerTool<Int> {
 
 	function getPlacementX(m:Coords) {
 		return snapToGrid()
-			? M.round( ( m.cx + curEntityDef.pivotX ) * curLayerInstance.def.gridSize )
+			? M.round( m.cx * curLayerInstance.def.gridSize )
 			: m.levelX;
 	}
 
 	function getPlacementY(m:Coords) {
 		return snapToGrid()
-			? M.round( ( m.cy + curEntityDef.pivotY ) * curLayerInstance.def.gridSize)
+			? M.round( m.cy * curLayerInstance.def.gridSize)
 			: m.levelY;
 	}
 
